@@ -1,26 +1,18 @@
-class Bank_Account:
-    def __init__(self):
-        self.balance=0
-        print("Hello!!! Welcome to the Deposit & Withdrawal Machine")
- 
-    def deposit(self):
-        amount=float(input("Enter amount to be Deposited: "))
-        self.balance += amount
-        print("\n Amount Deposited:",amount)
- 
-    def withdraw(self):
-        amount = float(input("Enter amount to be Withdrawn: "))
-        if self.balance>=amount:
-            self.balance-=amount
-            print("\n You Withdrew:", amount)
-        else:
-            print("\n Insufficient balance  ")
- 
-    def display(self):
-        print("\n Net Available Balance=",self.balance)
- 
-s = Bank_Account()
+def linear_Search(list1, n, key):  
   
-s.deposit()
-s.withdraw()
-s.display()
+    
+    for i in range(0, n):  
+        if (list1[i] == key):  
+            return i  
+    return -1  
+  
+  
+list1 = [1 ,3, 5, 4, 7, 9]  
+key = 7  
+  
+n = len(list1)  
+res = linear_Search(list1, n, key)  
+if(res == -1):  
+    print("Element not found")  
+else:  
+    print("Element found at index: ", res)
